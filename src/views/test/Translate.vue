@@ -83,8 +83,8 @@
                                     <div class="tl-text-type">번역문</div>
                                     <textarea
                                         class="tl-text-content tl-text-tl"
+                                        v-model="item.translatedText"
                                     >
-                                        {{ item.translatedText }}
                                     </textarea>
                                     <div class="tl-text-btns">
                                         <button
@@ -152,6 +152,7 @@ export default {
             progress: 0,
             progressArray: Array(100),
             length: 0,
+            translatedText: [],
         };
     },
     created() {
