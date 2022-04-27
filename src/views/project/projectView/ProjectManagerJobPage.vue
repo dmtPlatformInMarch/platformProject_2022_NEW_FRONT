@@ -46,7 +46,6 @@
                         >
                         <span
                             ><button
-                                href="javascript:;"
                                 @click="routeTrPage(item.fileId)"
                             >
                                 작업물 확인
@@ -142,6 +141,7 @@ export default {
             );
         },
         routeTrPage(fileId) {
+            console.log('route tr page');
             this.$router.push(`/tr/${fileId}`);
         },
         routeDetailPage(jobId) {

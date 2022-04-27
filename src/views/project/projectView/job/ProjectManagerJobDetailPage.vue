@@ -99,7 +99,7 @@
                         <span>{{ item.createdDate | formatDateShortly }}</span>
                         <span
                             ><button
-                                @click="routeTrPage(item.id, item.originalName)"
+                                @click="routeTrPage(item.id)"
                             >
                                 작업물 확인
                             </button></span
@@ -597,6 +597,11 @@ export default {
                 console.log(error);
             }
             this.getAppFiles();
+        },
+        routeTrPage(id) {
+            console.log('route tr page');
+            console.log('id : ' + id);
+            this.$router.push(`/tr/${id}`);
         },
     },
 };
